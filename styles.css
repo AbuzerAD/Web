@@ -684,6 +684,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   line-height: 1.72;
 }
 
+/* Keep the experience heading on a single line on wider screens. */
+#experience .section-head h2 { white-space: nowrap; }
+@media (max-width: 640px) {
+  #experience .section-head h2 { white-space: normal; text-wrap: balance; }
+}
+
 /* ---------- Chips / search ---------- */
 .chips {
   display: flex;
