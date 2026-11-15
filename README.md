@@ -47,7 +47,7 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
 ## What is interactive
 
 - **Work gallery** — category filters with live counts, keyword search, empty state and a
-  “Showing X of 14 projects” status line.
+  “Showing X of 15 projects” status line.
 - **Case-study dialog** — every card opens a detail view with role, tools, overview and scope.
   Deep links (`#p-<id>`) open a project directly, and the dialog supports **Next project**.
 - **Command palette** — `⌘K` / `Ctrl+K` or the header search button. Search sections, projects,
@@ -70,7 +70,7 @@ The page is deliberately split so content stays easy to change.
 
 ### Projects
 
-All fourteen projects live in the `PROJECTS` array at the top of `script.js`. Each entry supports:
+All fifteen projects live in the `PROJECTS` array at the top of `script.js`. Each entry supports:
 
 ```js
 {
