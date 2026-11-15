@@ -973,12 +973,21 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   border: 1px solid var(--line);
   background: var(--bg-tint);
   transition: background 0.25s var(--ease), border-color 0.25s var(--ease),
-    box-shadow 0.25s var(--ease);
+    box-shadow 0.25s var(--ease), transform 0.25s var(--ease),
+    width 0.25s var(--ease), height 0.25s var(--ease);
 }
 .exp.is-open::before {
+  width: 20px;
+  height: 20px;
+  left: -36px;
+  top: 22px;
   background: var(--mint);
   border-color: var(--mint);
-  box-shadow: 0 0 0 5px rgba(201, 247, 214, 0.2);
+  box-shadow: 0 0 0 6px rgba(201, 247, 214, 0.25);
+  transform: scale(1);
+}
+[data-theme="dark"] .exp.is-open::before {
+  box-shadow: 0 0 0 6px rgba(201, 247, 214, 0.15);
 }
 
 .exp__head {
