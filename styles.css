@@ -1435,7 +1435,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   gap: 26px;
   max-width: 900px;
   margin-inline: auto;
-  padding: clamp(26px, 4vw, 46px);
+  margin-top: clamp(12px, 2vw, 24px);
+  padding: clamp(34px, 5vw, 54px) clamp(26px, 4vw, 46px);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background: var(--surface-2);
