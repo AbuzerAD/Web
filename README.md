@@ -52,7 +52,7 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
   Deep links (`#p-<id>`) open a project directly, and the dialog supports **Next project**.
 - **Command palette** — `⌘K` / `Ctrl+K` or the header search button. Search sections, projects,
   skills and social links from the keyboard.
-- **Experience accordion** — eleven roles expand to show responsibilities and focus areas.
+- **Experience accordion** — eleven roles expand to show responsibilities, focus areas and a key achievement.
 - **Skills** — filter cards by discipline (research, design, systems).
 - **Toolkit** — animated proficiency meters that fill when scrolled into view.
 - **Process** — five tabbed stages (Discover → Deliver) with deliverables for each.
@@ -84,6 +84,7 @@ All fourteen projects live in the `PROJECTS` array at the top of `script.js`. Ea
   summary: "One-line card description.",
   overview: "Longer case-study paragraph.",
   scope: ["Bullet one", "Bullet two"],
+  achievement: "One-line key achievement shown as a callout in the dialog.",
   image: "assets/work/example.jpg", // omit to use a generated gradient tile
   alt: "Description for screen readers",
   link: "https://www.behance.net/…",

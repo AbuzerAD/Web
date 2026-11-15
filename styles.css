@@ -1077,6 +1077,54 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .exp__content .pills li { padding-left: 10px; }
 .exp__content .pills li::before { display: none; }
 
+/* ---------- Achievement callout ---------- */
+.achievement {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--mint-soft);
+}
+.achievement[hidden] { display: none; }
+.achievement__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--mint-deep);
+}
+.achievement__icon .ico { width: 15px; height: 15px; }
+.achievement__label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mint-deep);
+}
+.achievement p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.exp__achievement { grid-column: 1 / -1; margin-top: 4px; }
+#pm-achievement { margin-top: 20px; }
+[data-theme="dark"] .achievement {
+  border-color: rgba(201, 247, 214, 0.18);
+  background: rgba(201, 247, 214, 0.06);
+}
+[data-theme="dark"] .achievement__icon {
+  background: rgba(201, 247, 214, 0.14);
+  color: var(--mint);
+}
+[data-theme="dark"] .achievement__label { color: var(--mint); }
+
 /* ---------- Education ---------- */
 .education {
   margin-top: clamp(40px, 5vw, 56px);

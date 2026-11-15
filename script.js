@@ -43,6 +43,8 @@
         "Tabular reporting, filters and export states",
         "Component library and developer handoff",
       ],
+      achievement:
+        "Consolidated brand share, incentives and pre-booking reporting into one dashboard distributors could scan and act on, replacing scattered spreadsheet views.",
       link: "https://www.behance.net/gallery/146368539/HYKE-Distributor-Dashboard",
       linkLabel: "Behance",
     },
@@ -64,6 +66,8 @@
         "Medal, app icon and supporting icon set",
         "Brand application inside the product",
       ],
+      achievement:
+        "Delivered a bilingual lockup and icon system that sits naturally beside the HYKE masterbrand in both Arabic and English app touchpoints.",
       link: "https://www.behance.net/gallery/124257883/HYKE-Rewards",
       linkLabel: "Behance",
     },
@@ -86,6 +90,8 @@
         "Booking and order flows",
         "iOS design language and reusable components",
       ],
+      achievement:
+        "Designed the end-to-end iOS experience for a platform serving 1,500+ restaurants — the product that Careem acquired and carried into Careem NOW.",
       link: "https://www.behance.net/gallery/97281015/RoundMenu-iOS-App",
       linkLabel: "Behance",
     },
@@ -107,6 +113,8 @@
         "Menu, offer and cart modules",
         "Responsive checkout and confirmation",
       ],
+      achievement:
+        "Simplified the ordering journey from menu to confirmation, removing the friction that causes drop-off at checkout on both phone and desktop.",
       link: "https://www.behance.net/gallery/97282739/RoundMenu-Order-Online",
       linkLabel: "Behance",
     },
@@ -128,6 +136,8 @@
         "Restaurant card and offer design",
         "Listing, filter and empty-state patterns",
       ],
+      achievement:
+        "Gave the listing experience an appetite-led visual system that keeps food centre stage while making offers and delivery times easy to scan.",
       link: "https://www.behance.net/gallery/112885111/RoundMenu-Project-Green",
       linkLabel: "Behance",
     },
@@ -150,6 +160,8 @@
         "Vendor tablet experience",
         "App store creative",
       ],
+      achievement:
+        "Created a complete identity and shopping experience — logo, iOS and Android flows and vendor tablet — that keeps fresh produce at the centre of the brand.",
       link: "https://www.behance.net/gallery/92772905/elGrocer",
       linkLabel: "Behance",
     },
@@ -172,6 +184,8 @@
         "Schedule, check-ins and activity feed",
         "Responsive dashboard UI",
       ],
+      achievement:
+        "United programme planning and floor-side coaching in one responsive workspace, so trainers can run every client from a single view.",
       link: "https://www.behance.net/gallery/138032999/PTMode",
       linkLabel: "Behance",
     },
@@ -193,6 +207,8 @@
         "OKR progress and status patterns",
         "KPI cards, charts and data tables",
       ],
+      achievement:
+        "Replaced spreadsheet archaeology with a modular dashboard where leadership can read goal health at a glance and drill into any initiative.",
       link: "https://www.behance.net/gallery/97283025/Space-Corp-OKR-Dashboard",
       linkLabel: "Behance",
     },
@@ -214,6 +230,8 @@
         "Brand card presentation",
         "Send, personalise and checkout flow",
       ],
+      achievement:
+        "Designed a gifting flow that carries the warmth of the moment from browsing to checkout without adding steps to the send.",
       link: "https://www.behance.net/gallery/97409761/You-Got-a-Gift-UX-Design",
       linkLabel: "Behance",
     },
@@ -236,6 +254,8 @@
         "Icon grid and sizing rules",
         "App asset production",
       ],
+      achievement:
+        "Built a delivery icon set that stays crisp at small sizes and matches Careem’s visual language across app assets.",
       link: "https://dribbble.com/shots/26823614-Careem-Now-Scooter-icon",
       linkLabel: "Dribbble",
     },
@@ -258,6 +278,8 @@
         "Candidate onboarding",
         "Resume builder and management",
       ],
+      achievement:
+        "Made a long, multi-step job search and onboarding process feel quick — from first search through to a managed resume.",
       link: "https://www.behance.net/abuzerad",
       linkLabel: "Behance",
     },
@@ -281,6 +303,8 @@
         "Service-provider app flows",
         "Shared component language",
       ],
+      achievement:
+        "Aligned three products — customer app, provider app and operations portal — into one coherent product family with shared flows and components.",
       link: "https://www.behance.net/abuzerad",
       linkLabel: "Behance",
     },
@@ -303,6 +327,8 @@
         "Monochrome and app-icon variants",
         "Basic usage guidance",
       ],
+      achievement:
+        "Designed a mark that works as an app icon, a wordmark and a one-colour print mark from a single geometric idea.",
       link: "https://dribbble.com/shots/24231975-Silicon-Logo-Design",
       linkLabel: "Dribbble",
     },
@@ -325,6 +351,8 @@
         "Customer solution pages",
         "Ongoing design support",
       ],
+      achievement:
+        "Built the marketing site and customer-facing templates that let logoin.com explain its logo services clearly and sell them online.",
       link: "https://www.behance.net/abuzerad",
       linkLabel: "Behance",
     },
@@ -578,6 +606,13 @@
     $("#pm-tools").textContent = project.tools;
     $("#pm-overview").textContent = project.overview;
     $("#pm-scope").innerHTML = project.scope.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+
+    const achievement = $("#pm-achievement");
+    const achievementText = $("#pm-achievement-text");
+    if (achievement && achievementText) {
+      achievementText.textContent = project.achievement || "";
+      achievement.hidden = !project.achievement;
+    }
 
     $("#pm-media").innerHTML = project.image
       ? `<img src="${project.image}" alt="${escapeHtml(project.alt)}" width="808" height="632" decoding="async">`
