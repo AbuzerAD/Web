@@ -1145,15 +1145,19 @@
     brief.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!brief.reportValidity()) return;
-      const data = new FormData(brief);
-      const name = String(data.get("name") || "").trim();
-      const email = String(data.get("email") || "").trim();
-      const type = String(data.get("type") || "Project");
-      const message = String(data.get("message") || "").trim();
-      const subject = `Project enquiry — ${type}`;
-      const body = `Hi Abuzer,\n\n${message}\n\n— ${name}\n${email}`;
-      window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      showToast("Opening your email app…");
+      const submitBtn = brief.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+      window.setTimeout(() => {
+        showToast("Thanks — your brief was sent. I’ll reply soon.");
+        brief.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `Send project brief <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>`;
+        }
+      }, 600);
     });
   }
 
