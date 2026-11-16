@@ -243,7 +243,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   flex: none;
 }
 .brand__mark {
-  height: 44px;
+  height: 60px;
   width: auto;
   color: var(--header-text);
 }
@@ -1745,7 +1745,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   flex-wrap: wrap;
 }
 .footer__brand { display: flex; align-items: center; gap: 12px; }
-.footer__brand .brand__mark { color: var(--mint); height: 40px; width: auto; }
+.footer__brand .brand__mark { color: var(--mint); height: 50px; width: auto; }
 .footer__name { font-size: 13.5px; font-weight: 600; letter-spacing: -0.01em; }
 .footer__copy { font-size: 11px; color: var(--on-ink-muted); }
 .footer__hobbies {
