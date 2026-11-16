@@ -1156,7 +1156,15 @@
           body: new FormData(brief),
           headers: { Accept: "application/json" },
         });
-        if (!response.ok) throw new Error("network");
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.success === "false" || result.success === false) {
+          if (String(result.message || "").toLowerCase().includes("activat")) {
+            showToast("Activation email sent — click the link in your Gmail inbox, then try again.");
+          } else {
+            throw new Error(result.message || "failed");
+          }
+          return;
+        }
         showToast("Thanks — your brief was sent. I’ll reply soon.");
         brief.reset();
       } catch (error) {
