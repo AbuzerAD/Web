@@ -1142,7 +1142,7 @@
      --------------------------------------------------------- */
   const brief = $("#brief");
   if (brief) {
-    brief.addEventListener("submit", (event) => {
+    brief.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (!brief.reportValidity()) return;
       const submitBtn = brief.querySelector('button[type="submit"]');
@@ -1150,14 +1150,23 @@
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending…";
       }
-      window.setTimeout(() => {
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/abuzer.ad@gmail.com", {
+          method: "POST",
+          body: new FormData(brief),
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("network");
         showToast("Thanks — your brief was sent. I’ll reply soon.");
         brief.reset();
+      } catch (error) {
+        showToast("Couldn’t send just now — please email abuzer.ad@gmail.com directly.");
+      } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = `Send project brief <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>`;
         }
-      }, 600);
+      }
     });
   }
 
