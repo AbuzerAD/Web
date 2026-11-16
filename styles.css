@@ -35,7 +35,7 @@
   --shadow: 0 22px 60px -28px rgba(9, 14, 22, 0.45);
   --shadow-soft: 0 10px 30px -18px rgba(9, 14, 22, 0.35);
 
-  --header-h: 76px;
+  --header-h: 96px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --container: 1200px;
 }
@@ -243,7 +243,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   flex: none;
 }
 .brand__mark {
-  height: 60px;
+  height: 80px;
   width: auto;
   color: var(--header-text);
 }
