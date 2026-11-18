@@ -13,8 +13,15 @@ dependencies**. The only remote asset is the Poppins webfont from Google Fonts.
 | --- | --- |
 | `index.html` | Page markup, copy, section content and inline SVG icon sprite |
 | `styles.css` | Design tokens, themes, layout, components, responsive/print rules |
-| `script.js` | Project data, filtering, dialogs, command palette and every interaction |
+| `script.js` | Filtering, dialogs, command palette and every index-page interaction |
+| `data/projects.js` | Single source of truth for all fifteen projects |
+| `work/` | One dedicated case-study page per project, plus `work/index.html` |
+| `logos.html` | Logo and icon gallery, generated from the Dribbble archive |
+| `assets/case.css` | Styles for case-study pages and the logo gallery |
+| `assets/case.js` | Theme, navigation and scroll behaviour for the sub-pages |
 | `assets/work/` | Project artwork downloaded from the Behance portfolio |
+| `assets/logos/` | Logo and icon images downloaded from Dribbble |
+| `tools/build.py` | Optional generator that writes `work/*.html` and `logos.html` |
 
 ## Run it locally
 
@@ -48,8 +55,12 @@ Before publishing, deploy over HTTPS so the clipboard, fonts and share links all
 
 - **Work gallery** — category filters with live counts, keyword search, empty state and a
   “Showing X of 15 projects” status line.
-- **Case-study dialog** — every card opens a detail view with role, tools, overview and scope.
-  Deep links (`#p-<id>`) open a project directly, and the dialog supports **Next project**.
+- **Case-study dialog** — every card opens a quick-view with role, tools, overview and scope,
+  plus a **Read full case study** link to that project's dedicated page. Deep links (`#p-<id>`)
+  open a project directly, and the dialog supports **Next project**.
+- **Case-study pages** — `work/<id>.html` gives each project a full page with hero, facts,
+  overview, achievement, scope, related work and next-project navigation.
+- **Logo gallery** — `logos.html` shows 84 marks from Dribbble, each linking to the original shot.
 - **Command palette** — `⌘K` / `Ctrl+K` or the header search button. Search sections, projects,
   skills and social links from the keyboard.
 - **Experience accordion** — eleven roles expand to show responsibilities, focus areas and a key achievement.
@@ -70,7 +81,8 @@ The page is deliberately split so content stays easy to change.
 
 ### Projects
 
-All fifteen projects live in the `PROJECTS` array at the top of `script.js`. Each entry supports:
+All fifteen projects live in `window.PROJECTS` in `data/projects.js`, which both the work grid
+and the case-study pages read. Each entry supports:
 
 ```js
 {
@@ -90,13 +102,40 @@ All fifteen projects live in the `PROJECTS` array at the top of `script.js`. Eac
   link: "https://www.behance.net/…",
   linkLabel: "Behance",
   tile: ["#dff7e8", "#b9ecd0"], // gradient for the no-image fallback
-  initials: "HD"
+  initials: "HD",
+
+  // optional — only used by the dedicated case-study page
+  sections: [
+    { title: "Approach", body: ["Paragraph one.", "Paragraph two."], items: ["Optional bullet"] }
+  ],
+  gallery: [
+    { image: "assets/work/extra-1.jpg", alt: "Screenshot of …", caption: "Optional caption" }
+  ]
 }
 ```
+
+Add `sections` or `gallery` to an entry and regenerate the pages to add real long-form content
+to a case study. Both are skipped entirely when absent, so no empty headings are rendered.
 
 Filter counts, the result total and the case-study dialog all derive from this array, so adding
 or removing an entry updates the whole gallery automatically. If a project has no `image`, it
 gets a branded gradient tile using `tile` and `initials`.
+
+### Case-study pages and the logo gallery
+
+The pages under `work/` and `logos.html` are generated so they stay consistent:
+
+```bash
+python3 tools/build.py
+```
+
+- Reads `data/projects.js` and `tools/logos.json`.
+- Writes `work/index.html`, one `work/<id>.html` per project, and `logos.html`.
+- Deployment still needs no build step — the generated HTML is committed.
+
+The logo gallery reads `tools/logos.json`, which holds the Dribbble shot id, title, link and
+image path for each mark. Add a shot by appending an entry and dropping its image into
+`assets/logos/`.
 
 ### Everything else
 
