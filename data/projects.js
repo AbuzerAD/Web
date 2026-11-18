@@ -235,14 +235,14 @@ window.PROJECTS = [
       "#00b85c",
       "#013a22"
     ],
-    "summary": "[TODO] One-line card description for the merchant dashboard.",
-    "overview": "[TODO] Case-study paragraph for the Careem NOW merchant dashboard — replace with final copy.",
+    "summary": "Merchant dashboard design for Careem NOW — case study in progress.",
+    "overview": "This case study is in progress. The project covers the merchant-facing dashboard for Careem NOW; the full write-up will be added shortly.",
     "role": "Product designer",
     "tools": "Figma, Sketch",
     "scope": [
-      "[TODO] Scope item"
+      "Merchant dashboard design"
     ],
-    "achievement": "[TODO] Key achievement for the merchant dashboard.",
+    "achievement": "",
     "link": "https://www.behance.net/abuzerad",
     "linkLabel": "Behance"
   },
@@ -262,14 +262,14 @@ window.PROJECTS = [
       "#00b85c",
       "#013a22"
     ],
-    "summary": "[TODO] One-line card description for account management.",
-    "overview": "[TODO] Case-study paragraph for the Careem NOW account management app — replace with final copy.",
+    "summary": "Account management design for Careem NOW — case study in progress.",
+    "overview": "This case study is in progress. The project covers account management for Careem NOW; the full write-up will be added shortly.",
     "role": "Product designer",
     "tools": "Figma, Sketch",
     "scope": [
-      "[TODO] Scope item"
+      "Account management design"
     ],
-    "achievement": "[TODO] Key achievement for account management.",
+    "achievement": "",
     "link": "https://www.behance.net/abuzerad",
     "linkLabel": "Behance"
   },
