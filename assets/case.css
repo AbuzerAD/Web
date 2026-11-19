@@ -371,7 +371,7 @@
 }
 .logos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   padding-bottom: 90px;
 }
@@ -413,6 +413,7 @@
   .cs-toc a { border-left: 0; border-bottom: 2px solid var(--line); padding: 0 0 6px; white-space: nowrap; }
   .cs-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .logos-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
   .cs-hero { padding-top: 34px; }
@@ -421,7 +422,7 @@
   .cs-cards { grid-template-columns: minmax(0, 1fr); }
   .cs-cover img { border-radius: var(--radius); }
   .cs-next__inner { padding: 32px 0; }
-  .logos-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .logos-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
