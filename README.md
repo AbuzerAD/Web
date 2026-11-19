@@ -1,8 +1,9 @@
 # Abuzer Ditta — Portfolio
 
 An interactive one-page portfolio for Abuzer Ditta, a Senior Product / UX-UI Designer.
-The visual language follows the "Hapeniz" Figma direction: a mint header, a dark cosmic hero,
-Poppins typography, rounded cards and a light/dark theme.
+The visual language is a HyperOS 3-inspired "liquid glass" system: sapphire accents on a cool
+off-white canvas (near-black ink in dark mode), a dark cosmic hero, Poppins typography, pill-shaped
+controls, unified rounded corners and layered depth — all without heavy blur on content.
 
 The site is fully static — plain HTML, CSS and vanilla JavaScript, with **no build step and no
 dependencies**. The only remote asset is the Poppins webfont from Google Fonts.

@@ -38,7 +38,7 @@
       themeBtn.setAttribute("aria-pressed", String(dark));
       themeBtn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
     }
-    if (metaTheme) metaTheme.setAttribute("content", dark ? "#0a0f1a" : "#003049");
+    if (metaTheme) metaTheme.setAttribute("content", dark ? "#05080f" : "#f4f7fd");
     if (persist) {
       try { localStorage.setItem("ad-theme", theme); } catch (error) { /* private mode */ }
     }

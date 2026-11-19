@@ -22,7 +22,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261117f"
+ASSET_VERSION = "20261118c"
 
 # --------------------------------------------------------------------------
 # helpers
@@ -101,7 +101,7 @@ def head(title, description, rel="../", extra_schema=None):
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}" />
-<meta name="theme-color" content="#003049" />
+<meta name="theme-color" content="#f4f7fd" />
 <meta property="og:title" content="{esc(title)}" />
 <meta property="og:description" content="{esc(description)}" />
 <meta property="og:type" content="article" />
@@ -113,7 +113,7 @@ def head(title, description, rel="../", extra_schema=None):
     }} catch (e) {{}}
   }})();
 </script>
-{schema}<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23003049'/%3E%3Cpath d='M8 24 16 8l8 16M11.5 18.5h9' fill='none' stroke='%23fcbf49' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+{schema}<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23050c18'/%3E%3Cpath d='M8 24 16 8l8 16M11.5 18.5h9' fill='none' stroke='%2386b0ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -192,7 +192,7 @@ def footer(rel="../"):
 def tile(project, rel):
     """Gradient placeholder for projects without artwork."""
     initials = esc(project.get("initials") or project["title"][:2].upper())
-    colors = project.get("tile") or ["#003049", "#001a2b"]
+    colors = project.get("tile") or ["#1b4fd8", "#0a1424"]
     return (
         f'<div class="case-card__tile" style="background:linear-gradient(140deg,{colors[0]},{colors[1]})">'
         f"{initials}</div>"
@@ -304,7 +304,7 @@ def case_page(project, index, projects):
             f"</figure>"
         )
     else:
-        colors = project.get("tile") or ["#003049", "#001a2b"]
+        colors = project.get("tile") or ["#1b4fd8", "#0a1424"]
         cover = (
             f'<figure class="cs-cover container">'
             f'<div class="case-card__tile" style="aspect-ratio:16/9;border-radius:var(--radius-lg);'

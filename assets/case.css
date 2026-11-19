@@ -425,3 +425,132 @@
 @media (prefers-reduced-motion: reduce) {
   .cs-card, .case-card, .logo-tile { transition: none; }
 }
+
+/* =========================================================
+   HyperOS 3 layer — case studies + logo gallery
+   Mirrors the glass layer at the end of styles.css.
+   ========================================================= */
+
+/* ---------- Page chrome ---------- */
+.cs-hero { background: none; }
+
+.cs-back {
+  padding: 7px 14px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  background: var(--glass);
+  box-shadow: var(--sheen);
+  transition: color 0.25s var(--ease), transform 0.4s var(--ease-spring),
+    border-color 0.25s var(--ease);
+}
+.cs-back:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--text) 26%, transparent);
+}
+
+.cs-facts {
+  padding: 22px 26px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--glass);
+  box-shadow: var(--shadow-float), var(--sheen);
+}
+
+/* ---------- Cover ---------- */
+.cs-cover img {
+  border-radius: var(--radius-xl);
+  border-color: var(--hairline);
+  box-shadow: var(--shadow-float-lg), var(--sheen);
+}
+
+/* ---------- Table of contents ---------- */
+.cs-aside .btn {
+  border-radius: 999px;
+  background: var(--glass);
+}
+
+@media (min-width: 1001px) {
+  .cs-toc { gap: 4px; }
+  .cs-toc a {
+    padding: 7px 12px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: background 0.25s var(--ease), color 0.25s var(--ease),
+      border-color 0.25s var(--ease);
+  }
+  .cs-toc a:hover,
+  .cs-toc a:focus-visible {
+    background: var(--glass);
+    border-color: var(--hairline);
+  }
+  .cs-toc a.is-active {
+    background: var(--glass);
+    border-color: var(--hairline);
+    box-shadow: var(--sheen);
+  }
+}
+
+/* ---------- Body ---------- */
+.cs-gallery img {
+  border-radius: var(--radius);
+  border-color: var(--hairline);
+  box-shadow: var(--shadow-float), var(--sheen);
+}
+
+/* ---------- Next + related ---------- */
+.cs-next {
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline-soft);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--bg-tint) 78%, transparent),
+    color-mix(in srgb, var(--bg-tint) 38%, transparent));
+}
+.cs-next__link {
+  transition: color 0.25s var(--ease), transform 0.4s var(--ease-spring);
+}
+.cs-next__link:hover { transform: translateX(3px); }
+
+.cs-card,
+.case-card,
+.logo-tile {
+  border-color: var(--hairline);
+  background: var(--glass);
+  box-shadow: var(--sheen);
+  transition: transform 0.5s var(--ease-spring), box-shadow 0.35s var(--ease),
+    border-color 0.3s var(--ease);
+}
+.cs-card:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--mint-deep) 28%, var(--hairline));
+  box-shadow: var(--shadow-float-lg), var(--sheen);
+}
+.case-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--mint-deep) 32%, var(--hairline));
+  box-shadow: var(--shadow-float-lg), var(--sheen);
+}
+.logo-tile:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--mint-deep) 32%, var(--hairline));
+  box-shadow: var(--shadow-float-lg), var(--sheen);
+}
+.cs-card img,
+.case-card__media,
+.logo-tile img { border-radius: 18px; }
+
+/* ---------- Gallery ---------- */
+.logos-count {
+  border-color: var(--hairline);
+  background: var(--glass);
+  box-shadow: var(--sheen);
+  -webkit-backdrop-filter: var(--blur-soft);
+  backdrop-filter: var(--blur-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-card:hover,
+  .case-card:hover,
+  .logo-tile:hover,
+  .cs-back:hover,
+  .cs-next__link:hover { transform: none; }
+}
