@@ -23,6 +23,7 @@ dependencies**. The only remote asset is the Poppins webfont from Google Fonts.
 | `assets/work/` | Project artwork downloaded from the Behance portfolio |
 | `assets/logos/` | Logo and icon images downloaded from Dribbble |
 | `tools/build.py` | Optional generator that writes `work/*.html` and `logos.html` |
+| `tools/icons.py` | Re-fetches the Google Material Symbols paths into the inline SVG sprite |
 
 ## Run it locally
 
