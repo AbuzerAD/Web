@@ -2,11 +2,11 @@
 
 An interactive one-page portfolio for Abuzer Ditta, a Senior Product / UX-UI Designer.
 The visual language is a HyperOS 3-inspired "liquid glass" system: sapphire accents on a cool
-off-white canvas (near-black ink in dark mode), a dark cosmic hero, Google Sans Text typography, pill-shaped
+off-white canvas (near-black ink in dark mode), a dark cosmic hero, IBM Plex Sans typography, pill-shaped
 controls, unified rounded corners and layered depth — all without heavy blur on content.
 
 The site is fully static — plain HTML, CSS and vanilla JavaScript, with **no build step and no
-dependencies**. The only remote asset is the Google Sans Text webfont from Google Fonts.
+dependencies**. The only remote asset is the IBM Plex Sans webfont from Google Fonts.
 
 ## Structure
 

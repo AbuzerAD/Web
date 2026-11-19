@@ -6,7 +6,7 @@
 /* Palette: HyperOS 3 cool glass — sapphire + cyan on near-black ink.
    The --mint* names are legacy aliases kept so every component resolves. */
 :root {
-  --font: "Google Sans Text", "Google Sans", Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font: "IBM Plex Sans", "Helvetica Neue", Arial, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --mint: #2f6bff;
   --mint-deep: #1b4fd8;
@@ -499,11 +499,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 .hero__title {
   margin-top: 16px;
-  max-width: 12ch;
+  max-width: 13ch;
   font-size: clamp(2.6rem, 6.3vw, 5.1rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.04;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.022em;
   text-wrap: balance;
 }
 .hero__accent {
