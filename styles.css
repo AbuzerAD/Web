@@ -231,7 +231,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   left: 0;
   bottom: -1px;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: transparent;
   overflow: hidden;
 }
@@ -674,7 +674,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .eyebrow::before {
   content: "";
   width: 26px;
-  height: 2px;
+  height: 4px;
   border-radius: 99px;
   background: currentColor;
   opacity: 0.45;
@@ -2361,7 +2361,7 @@ body::before {
   right: 30px;
   bottom: 0;
   width: auto;
-  height: 2px;
+  height: 4px;
   border-radius: 99px;
 }
 .site-header .progress__bar {
