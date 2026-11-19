@@ -370,7 +370,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(5, 12, 24, 0.35) 0%, rgba(5, 12, 24, 0.6) 100%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.5) 0%, rgba(5, 12, 24, 0.7) 100%),
     url('assets/hero-bg.jpg') center / cover no-repeat,
     var(--ink);
   color: var(--on-ink);
@@ -1618,7 +1618,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(5, 12, 24, 0.5) 0%, rgba(5, 12, 24, 0.75) 100%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.6) 0%, rgba(5, 12, 24, 0.8) 100%),
     url('assets/hero-bg.jpg') center / cover no-repeat,
     var(--ink);
   color: var(--on-ink);
@@ -2715,7 +2715,7 @@ body::before {
 /* ---------- Hero ---------- */
 .hero {
   background:
-    linear-gradient(180deg, rgba(5, 12, 24, 0.35) 0%, rgba(5, 12, 24, 0.6) 100%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.5) 0%, rgba(5, 12, 24, 0.7) 100%),
     url('assets/hero-bg.jpg') center / cover no-repeat,
     var(--ink);
   padding-bottom: clamp(22px, 3vw, 34px);
@@ -2767,7 +2767,7 @@ body::before {
 .contact {
   border-radius: 8px 8px 0 0;
   background:
-    linear-gradient(180deg, rgba(5, 12, 24, 0.5) 0%, rgba(5, 12, 24, 0.75) 100%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.6) 0%, rgba(5, 12, 24, 0.8) 100%),
     url('assets/hero-bg.jpg') center / cover no-repeat,
     var(--ink);
 }
