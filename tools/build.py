@@ -22,7 +22,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261118e"
+ASSET_VERSION = "20261118f"
 
 # --------------------------------------------------------------------------
 # helpers
@@ -116,7 +116,7 @@ def head(title, description, rel="../", extra_schema=None):
 {schema}<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23050c18'/%3E%3Cpath d='M8 24 16 8l8 16M11.5 18.5h9' fill='none' stroke='%2386b0ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="{rel}styles.css?v={ASSET_VERSION}" />
 <link rel="stylesheet" href="{rel}assets/case.css?v={ASSET_VERSION}" />
 </head>
