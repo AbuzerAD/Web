@@ -22,7 +22,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ASSET_VERSION = "20261118p"
+ASSET_VERSION = "20261118q"
 
 # --------------------------------------------------------------------------
 # helpers

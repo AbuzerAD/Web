@@ -1614,7 +1614,10 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .contact {
   position: relative;
   overflow: hidden;
-  background: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(5, 12, 24, 0.72) 0%, rgba(5, 12, 24, 0.88) 100%),
+    url('assets/hero-nebula.jpg') center / cover no-repeat,
+    var(--ink);
   color: var(--on-ink);
   padding: clamp(64px, 8vw, 104px) 0;
 }
@@ -2709,9 +2712,8 @@ body::before {
 /* ---------- Hero ---------- */
 .hero {
   background:
-    radial-gradient(120% 105% at 10% -18%, #0d3a7a 0%, rgba(13, 58, 122, 0) 58%),
-    radial-gradient(95% 85% at 104% 0%, #0a2a5c 0%, rgba(10, 42, 92, 0) 62%),
-    radial-gradient(70% 60% at 78% 100%, rgba(34, 211, 238, 0.16), transparent 68%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.55) 0%, rgba(5, 12, 24, 0.72) 100%),
+    url('assets/hero-nebula.jpg') center / cover no-repeat,
     var(--ink);
   padding-bottom: clamp(22px, 3vw, 34px);
 }
@@ -2762,8 +2764,8 @@ body::before {
 .contact {
   border-radius: 8px 8px 0 0;
   background:
-    radial-gradient(80% 70% at 100% 0%, rgba(76, 134, 255, 0.12), transparent 60%),
-    radial-gradient(70% 60% at 0% 100%, rgba(34, 211, 238, 0.1), transparent 62%),
+    linear-gradient(180deg, rgba(5, 12, 24, 0.72) 0%, rgba(5, 12, 24, 0.88) 100%),
+    url('assets/hero-nebula.jpg') center / cover no-repeat,
     var(--ink);
 }
 .contact__copy {
