@@ -31,6 +31,7 @@ ICONS = {
     "i-sun": "light_mode",
     "i-moon": "dark_mode",
     "i-external": "open_in_new",
+    "i-download": "download",
     "i-quote": "format_quote",
     "i-spark": "auto_awesome",
     "s-research": "person_search",
