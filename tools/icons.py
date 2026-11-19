@@ -1,4 +1,4 @@
-"""Swap the inline SVG sprite in index.html for Google Material Symbols (Outlined).
+"""Swap the inline SVG sprite in index.html for Google Material Symbols (Rounded).
 
 The sprite keeps its own symbol ids, so every `<use href="#…">` in the markup,
 script.js and the generated case pages keeps working. `tools/build.py` copies
@@ -15,7 +15,7 @@ import re
 import urllib.request
 
 CDN = ("https://fonts.gstatic.com/s/i/short-term/release/"
-       "materialsymbolsoutlined/{name}/default/24px.svg")
+       "materialsymbolsrounded/{name}/default/24px.svg")
 
 ICONS = {
     "i-phone": "call",
