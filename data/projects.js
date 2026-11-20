@@ -71,7 +71,16 @@ window.PROJECTS = [
     ],
     "achievement": "Designed the end-to-end iOS experience for a platform serving 1,500+ restaurants — the product that Careem acquired and carried into Careem NOW.",
     "link": "https://www.behance.net/gallery/97281015/RoundMenu-iOS-App",
-    "linkLabel": "Behance"
+    "linkLabel": "Behance",
+    "gallery": [
+      { "image": "assets/work/roundmenu-ios-gallery-1.webp", "alt": "RoundMenu iOS app — screen 1" },
+      { "image": "assets/work/roundmenu-ios-gallery-2.webp", "alt": "RoundMenu iOS app — screen 2" },
+      { "image": "assets/work/roundmenu-ios-gallery-3.webp", "alt": "RoundMenu iOS app — screen 3" },
+      { "image": "assets/work/roundmenu-ios-gallery-4.webp", "alt": "RoundMenu iOS app — screen 4" },
+      { "image": "assets/work/roundmenu-ios-gallery-5.webp", "alt": "RoundMenu iOS app — screen 5" },
+      { "image": "assets/work/roundmenu-ios-gallery-6.webp", "alt": "RoundMenu iOS app — screen 6" },
+      { "image": "assets/work/roundmenu-ios-gallery-7.webp", "alt": "RoundMenu iOS app — screen 7" }
+    ]
   },
   {
     "id": "roundmenu-order",
