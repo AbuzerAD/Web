@@ -385,7 +385,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  animation: heroFade 75s infinite;
+  animation: heroFade 70s infinite;
   will-change: opacity;
 }
 .hero__bg-layer:nth-child(1) { background-image: url('assets/hero-1.jpg'); animation-delay: 0s; }
@@ -402,12 +402,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .hero__bg-layer:nth-child(12) { background-image: url('assets/hero-12.jpg'); animation-delay: 55s; }
 .hero__bg-layer:nth-child(13) { background-image: url('assets/hero-13.jpg'); animation-delay: 60s; }
 .hero__bg-layer:nth-child(14) { background-image: url('assets/hero-14.jpg'); animation-delay: 65s; }
-.hero__bg-layer:nth-child(15) { background-image: url('assets/hero-15.jpg'); animation-delay: 70s; }
 @keyframes heroFade {
   0% { opacity: 0; }
-  0.667% { opacity: 1; }
-  6% { opacity: 1; }
-  6.667% { opacity: 0; }
+  0.714% { opacity: 1; }
+  6.429% { opacity: 1; }
+  7.143% { opacity: 0; }
   100% { opacity: 0; }
 }
 
